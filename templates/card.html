@@ -1,0 +1,13 @@
+<div>
+<button ng-click="getCards();">Karty</button>
+<div ng-repeat="card in deck.cards" style="white-space: nowrap;display:inline-block; height:{{lst.cheight}}px;width:{{lst.cwidth}}px border-color:blue; margin-botton:10%" ><img src="{{card.images.png}}" style="border-style:solid;border-color:yellow; height:100%"/>
+</div>
+
+
+<div  style="margin-top:314;border-style:solid; border-color:green" >
+<div ng-repeat="card in deck.cards">
+
+<div> {{namePL(card.value)}} {{kolorPL(card.suit)}}</div>
+<p style="padding-right:5px;">{{card.code}}</p> </div></div>
+CARDS
+</div>

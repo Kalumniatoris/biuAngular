@@ -1,0 +1,16 @@
+
+<div>
+
+<div class="dyrektywy"></div>
+
+<label>Pociagnij </label><input type="number" ng-model="info.count" ng-change="setIle(info.count)" min="1" max="{{gRem()}}"/><label>kart z pozostalych {{gRem()}}</label>
+<div>Pozostanie {{gRem()-info.count}} kart w talii</div>
+
+<button ng-click="newDeck();">Nowa talia</button>
+
+
+
+
+
+
+</div>

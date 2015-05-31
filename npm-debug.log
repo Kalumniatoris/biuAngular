@@ -1,0 +1,82 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'angular-ui-router.stateHelper' ]
+2 info using npm@1.4.13
+3 info using node@v0.10.26
+4 verbose cache add [ 'angular-ui-router.stateHelper', null ]
+5 verbose cache add name=undefined spec="angular-ui-router.stateHelper" args=["angular-ui-router.stateHelper",null]
+6 verbose parsed url { protocol: null,
+6 verbose parsed url   slashes: null,
+6 verbose parsed url   auth: null,
+6 verbose parsed url   host: null,
+6 verbose parsed url   port: null,
+6 verbose parsed url   hostname: null,
+6 verbose parsed url   hash: null,
+6 verbose parsed url   search: null,
+6 verbose parsed url   query: null,
+6 verbose parsed url   pathname: 'angular-ui-router.stateHelper',
+6 verbose parsed url   path: 'angular-ui-router.stateHelper',
+6 verbose parsed url   href: 'angular-ui-router.stateHelper' }
+7 silly lockFile bf730e55-angular-ui-router-stateHelper angular-ui-router.stateHelper
+8 verbose lock angular-ui-router.stateHelper /home/ka2/.npm/bf730e55-angular-ui-router-stateHelper.lock
+9 silly lockFile bf730e55-angular-ui-router-stateHelper angular-ui-router.stateHelper
+10 silly lockFile bf730e55-angular-ui-router-stateHelper angular-ui-router.stateHelper
+11 verbose addNamed [ 'angular-ui-router.stateHelper', '' ]
+12 verbose addNamed [ null, '*' ]
+13 silly lockFile 543e53f9-angular-ui-router-stateHelper angular-ui-router.stateHelper@
+14 verbose lock angular-ui-router.stateHelper@ /home/ka2/.npm/543e53f9-angular-ui-router-stateHelper.lock
+15 silly addNameRange { name: 'angular-ui-router.stateHelper',
+15 silly addNameRange   range: '*',
+15 silly addNameRange   hasData: false }
+16 verbose url raw angular-ui-router.stateHelper
+17 verbose url resolving [ 'https://registry.npmjs.org/',
+17 verbose url resolving   './angular-ui-router.stateHelper' ]
+18 verbose url resolved https://registry.npmjs.org/angular-ui-router.stateHelper
+19 info trying registry request attempt 1 at 15:14:11
+20 http GET https://registry.npmjs.org/angular-ui-router.stateHelper
+21 http 404 https://registry.npmjs.org/angular-ui-router.stateHelper
+22 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+22 verbose headers   'content-type': 'application/json',
+22 verbose headers   'cache-control': 'max-age=0',
+22 verbose headers   'content-length': '51',
+22 verbose headers   'accept-ranges': 'bytes',
+22 verbose headers   date: 'Sun, 31 May 2015 13:13:18 GMT',
+22 verbose headers   via: '1.1 varnish',
+22 verbose headers   age: '0',
+22 verbose headers   connection: 'keep-alive',
+22 verbose headers   'x-served-by': 'cache-fra1221-FRA',
+22 verbose headers   'x-cache': 'MISS',
+22 verbose headers   'x-cache-hits': '0',
+22 verbose headers   'x-timer': 'S1433077998.884476,VS0,VE108' }
+23 silly registry.get cb [ 404,
+23 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+23 silly registry.get     'content-type': 'application/json',
+23 silly registry.get     'cache-control': 'max-age=0',
+23 silly registry.get     'content-length': '51',
+23 silly registry.get     'accept-ranges': 'bytes',
+23 silly registry.get     date: 'Sun, 31 May 2015 13:13:18 GMT',
+23 silly registry.get     via: '1.1 varnish',
+23 silly registry.get     age: '0',
+23 silly registry.get     connection: 'keep-alive',
+23 silly registry.get     'x-served-by': 'cache-fra1221-FRA',
+23 silly registry.get     'x-cache': 'MISS',
+23 silly registry.get     'x-cache-hits': '0',
+23 silly registry.get     'x-timer': 'S1433077998.884476,VS0,VE108' } ]
+24 silly lockFile 543e53f9-angular-ui-router-stateHelper angular-ui-router.stateHelper@
+25 silly lockFile 543e53f9-angular-ui-router-stateHelper angular-ui-router.stateHelper@
+26 error 404 404 Not Found: angular-ui-router.stateHelper
+26 error 404
+26 error 404 'angular-ui-router.stateHelper' is not in the npm registry.
+26 error 404 You should bug the author to publish it
+26 error 404
+26 error 404 Note that you can also install from a
+26 error 404 tarball, folder, or http url, or git url.
+27 error System Linux 3.13.0-40-generic
+28 error command "node" "/usr/local/bin/npm" "install" "angular-ui-router.stateHelper"
+29 error cwd /home/ka2/biu/ang
+30 error node -v v0.10.26
+31 error npm -v 1.4.13
+32 error code E404
+33 verbose exit [ 1, true ]
