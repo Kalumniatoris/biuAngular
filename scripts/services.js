@@ -63,9 +63,6 @@ myServices.service('KartyPL',function(){
 			case "KING":
 				return "Król"
 				break;
-			case "0":
-				return "10"
-				break;
 			default:
 				return name;
 				break;

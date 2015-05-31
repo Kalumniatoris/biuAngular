@@ -6,6 +6,9 @@
 
 
 	myControllers.controller('DeckCtrl', ['$scope', '$http', '$cookies', '$cookieStore','KartyPL','share', function($scope, $http,  $cookies, $cookieStore, KartyPL,share) {
+		
+		console.log('Witam');
+
 		$scope.todyr ={
 			id: 'new'
 		};
@@ -14,14 +17,14 @@
 		$scope.deck=share.get();
 		$scope.info={};
 		$scope.info.count=1;
-		$scope.id;
+		$scope.id=$cookieStore.get('id');
 		$scope.info.count=share.getIle();
 
 		$scope.init=function(){
 		var url = 'http://jsonp.afeld.me/?url=http://deckofcardsapi.com/api/deck/' + $scope.id + '/shuffle&callback=JSON_CALLBACK';
 		console.log(url);
 		$http.jsonp(url).success(function(data, status) {
-
+			share.sRem(data.remaining);
 			$scope.deck = data;
 			$scope.status = status;
 			$scope.id  = $cookieStore.get('id');
@@ -45,6 +48,7 @@
 			var url='http://jsonp.afeld.me/?callback=JSON_CALLBACK&url=http://deckofcardsapi.com/api/deck/'+$scope.id+'/draw/?count=0';
 			console.log(url)
 			$http.jsonp(url).success(function(data,status){
+				share.sRem(data.remaining)
 				$scope.deck=data;
 				$scope.status=status;
 			})
@@ -68,7 +72,7 @@
 		}
 
 			$scope.newDeck = function() {
-			console.log("Zapominanie talii");
+						console.log("Zapominanie talii");
 			//$cookieStore.remove('id');
 			$scope.init();
 		}
@@ -80,7 +84,6 @@
 
 
 	myControllers.controller('CardCtrl', ['$scope', '$http', '$cookies', '$cookieStore','KartyPL','share', function($scope, $http,  $cookies, $cookieStore, KartyPL,share) {
-
 
 		$scope.lst={};
 		$scope.lst.cheight=150;
@@ -106,30 +109,20 @@
 			$scope.deck = data;
 			console.log(data);
 			console.log(status);
-
+			share.sRem(0);
 		});
 		}
 
 
 		$scope.id = $cookieStore.get('id');
-	/*	console.log('IDE:' + $scope.id);
-
-		if (typeof $scope.id=== 'undefined') {
-			$scope.id="new";
-			$scope.init();
-		}
-		else{
-			$scope.getPar();
-		}
-*/
 	
 		$scope.kolorPL = function(par){
-		/*	console.log('tlumaczenie koloru');*/
+
 			return KartyPL.kolor(par);
 			
 		}
 		$scope.namePL = function(par){
-			// console.log("tlumaczenie nazwy");
+
 			return KartyPL.name(par);
 			
 		}
